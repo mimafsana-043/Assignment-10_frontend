@@ -40,11 +40,11 @@ const Register = () => {
             setPassError("");
         }
         const photo = form.photo.value;
-        console.log({ name, email, password, photo });
+        // console.log({ name, email, password, photo });
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 setUser(user);
             })
             .catch((error) => {
@@ -59,7 +59,7 @@ const Register = () => {
             googleSignIn()
                 .then((result) => {
                     const user = result.user;
-                    console.log("Google User:", user);
+                    // console.log("Google User:", user);
                     Swal.fire({
                         title: "Custom width, padding, color, background.",
                         width: 600,

@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddProperties = () => {
     const { user } = use(AuthContext)
-    console.log(user);
+    // console.log(user);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -24,7 +24,7 @@ const AddProperties = () => {
 
         }
 
-        fetch('http://localhost:3000/Foods', {
+        fetch('https://assignment10-ten.vercel.app/Foods', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -40,10 +40,10 @@ const AddProperties = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                console.log(data);
+                // console.log(data);
             })
             .catch(err => {
-                console.log(err)
+                // console.log(err)
             })
     }
     return (

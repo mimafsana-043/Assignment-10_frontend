@@ -1,13 +1,28 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import Banner from "../../Components/Banner/Banner";
 import Card from "../../Pages/Cards/Card";
 
 const Home = () => {
+    const [theme, setTheme] = useState(localStorage.getItem("theme"))
     const data = useLoaderData();
+
+    useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+    function handleToggle() {
+        if (theme === "light") {
+            setTheme("dark")
+        } else {
+            setTheme("light")
+        }
+    }
+console.log(theme);
     // console.log(data);
     return (
-        <div className="bg-gradient-to-r from-emerald-50 to-teal-100">
+        <div className={theme === "dark"? "bg-white": `bg-gradient-to-r from-emerald-50 to-teal-100`}>
             <h1 className="text-center bg-gradient-to-r from-emerald-100 to-teal-200 p-8 text-green-900 text-xl font-semibold ">"Eat of what is lawful and wholesome on the earth" (2:168)</h1>
 
             <div className="text-center bg-gradient-to-r from-emerald-100 to-teal-200 pt-2 pb-4 text-green-900">
@@ -42,6 +57,12 @@ const Home = () => {
 
                 </Link>
             </div>
+
+            <div className="flex items-center justify-center mt-4 ">
+
+                <button onClick={handleToggle} className="btn rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white">change your Theme</button>
+            </div>
+
 
             <div className="flex justify-center mt-16 mb-16 pb-8">
                 <div className="card w-[1024px] bg-base-100 card-xl shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">

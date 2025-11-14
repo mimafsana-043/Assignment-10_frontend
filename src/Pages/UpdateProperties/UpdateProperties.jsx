@@ -6,12 +6,12 @@ const UpdateProperties = () => {
 
 const data = useLoaderData();
 const food = data?.result ?? data ?? null;;
-console.log(food);
+// console.log(food);
 
  const { _id } = food;
 
 const { user } = use(AuthContext)
-    console.log(user);
+    // console.log(user);
 
 
 const navigate = useNavigate();
@@ -29,7 +29,7 @@ const handleSubmit = (e) => {
             image: e.target.photo.value,  
         }
 
-        fetch(`http://localhost:3000/updateProp/${food._id}`, {
+        fetch(`https://assignment10-ten.vercel.app/updateProp/${food._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                console.log(data);
+                // console.log(data);
                 navigate("/about");
 
             })

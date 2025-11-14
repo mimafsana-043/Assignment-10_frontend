@@ -24,7 +24,7 @@ const SingleFoodDetails = ({ foods }) => {
       }
     });
 
-    fetch(`http://localhost:3000/Foods/${foods._id}`, {
+    fetch(`https://assignment10-ten.vercel.app/Foods/${foods._id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -40,10 +40,10 @@ const SingleFoodDetails = ({ foods }) => {
           showConfirmButton: false,
           timer: 1500
         });
-        console.log(data);
+        // console.log(data);
       })
       .catch(err => {
-        console.log(err)
+        // console.log(err)
       })
   }
 

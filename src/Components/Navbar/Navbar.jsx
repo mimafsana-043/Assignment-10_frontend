@@ -19,7 +19,7 @@ const Navbar = () => {
             });
             // Sign-out successful.
         }).catch((error) => {
-            console.log(error);
+            // console.log(error);
             // An error happened.
         });
     }

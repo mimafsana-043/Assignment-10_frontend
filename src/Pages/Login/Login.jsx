@@ -32,7 +32,7 @@ const Login = () => {
             setPassError("");
         }
         const photo = form.photo.value;
-        console.log({ name, email, password, photo });
+        // console.log({ name, email, password, photo });
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
@@ -67,7 +67,7 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 const user = result.user;
-                console.log("Google User:", user);
+                // console.log("Google User:", user);
                 Swal.fire({
                     title: "You successfully Log in",
                     width: 600,

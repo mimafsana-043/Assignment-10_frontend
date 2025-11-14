@@ -20,12 +20,12 @@ const router = createBrowserRouter([
             {
                 index: true,
                 path: "/",
-                loader: () => fetch('http://localhost:3000/Foods'),
+                loader: () => fetch('https://assignment10-ten.vercel.app/Foods'),
                 element: <Home></Home>
             },
             {
                 path: "/about",
-                loader: () => fetch('http://localhost:3000/FoodAll'),
+                loader: () => fetch('https://assignment10-ten.vercel.app/FoodAll'),
                 element: <AboutUs></AboutUs>
             },
             {
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/detail/:_id",
-                loader: () => fetch('http://localhost:3000/FoodAll'),
+                loader: () => fetch('https://assignment10-ten.vercel.app/FoodAll'),
                 element: <PrivateRouter>
                     <FoodDetails></FoodDetails>
                 </PrivateRouter>
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateProp/:_id",
-                loader: ({params}) => fetch(`http://localhost:3000/Foods/${params._id}`),
+                loader: ({params}) => fetch(`https://assignment10-ten.vercel.app/Foods/${params._id}`),
                 element: <PrivateRouter>
                     <UpdateProperties></UpdateProperties>
                 </PrivateRouter>

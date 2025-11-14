@@ -4,7 +4,7 @@ import SingleDetailPage from "../SingleDetails/SingleDetailPage";
 
 const AboutUs = () => {
      const data = useLoaderData();
-     console.log(data);
+    //  console.log(data);
     return (
         <div className="bg-gradient-to-r from-emerald-50 to-teal-100 pb-10">
             <h1 className="text-center bg-gradient-to-r from-emerald-100 to-teal-200 p-8 text-green-900 text-xl font-semibold ">"Eat of what is lawful and wholesome on the earth" (2:168)</h1>
