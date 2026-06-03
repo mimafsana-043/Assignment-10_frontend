@@ -4,12 +4,14 @@ const SingleDetailPage = ({ d }) => {
     const { cafeName, description, image,priceBDT,discount,_id} = d;
     return (
         <div className="mt-2 mb-[-8px]">
-            <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <img
-                className="w-full h-48 sm:h-56 object-cover"
-                src={image}
-                alt="Chicken Burger"
-            />
+            <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-[480px]">
+             <div className="w-11/12 h-48 sm:h-56 object-cover m-4 rounded-lg overflow-hidden">
+                <img
+                    className=""
+                    src={image}
+                    alt="Chicken Burger"
+                />
+            </div>
 
             <div className="p-4 sm:p-5">
                 <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">{cafeName}</h2>
