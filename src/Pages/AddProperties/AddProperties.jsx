@@ -47,10 +47,10 @@ const AddProperties = () => {
             })
     }
     return (
-        <div className="mb-16">
-            <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100">
-                <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-8 w-full max-w-lg">
-                    <h2 className="text-2xl font-semibold text-center mb-6">Add Property</h2>
+        <div className="mb-8 sm:mb-12 md:mb-16 px-4">
+            <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100 py-8">
+                <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-4 sm:p-6 md:p-8 w-full max-w-lg">
+                    <h2 className="text-xl sm:text-2xl font-semibold text-center mb-4 sm:mb-6">Add Property</h2>
 
                     {/* Property Name */}
                     <div className="mb-4">

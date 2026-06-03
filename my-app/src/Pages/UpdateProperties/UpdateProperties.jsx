@@ -1,35 +1,33 @@
 import { use } from "react";
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 const UpdateProperties = () => {
 
 const data = useLoaderData();
-const food = data?.result ?? data ?? null;;
-// console.log(food);
-
- const { _id } = food;
+// const result = data.result;
+console.log(data);
 
 const { user } = use(AuthContext)
-    // console.log(user);
+    console.log(user);
 
-
-const navigate = useNavigate();
 
 const handleSubmit = (e) => {
         e.preventDefault()
 
         const formData = {
+
             foodType: e.target.property_name.value,
             name: e.target.name.value,
             description: e.target.description.value,
             catagory: e.target.catagory.value,
-            priceBDT: e.target.priceBDT.value,
+            priceBDT: e.target.price.value,
             location: e.target.location.value,
-            image: e.target.photo.value,  
+            image: e.target.photo.value,
+            email: e.target.email.value,
         }
 
-        fetch(`https://assignment10-ten.vercel.app/updateProp/${food._id}`, {
+        fetch(`http://localhost:3000/Foods`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -41,24 +39,22 @@ const handleSubmit = (e) => {
                 Swal.fire({
                     position: "top-center",
                     icon: "success",
-                    title: "Property Updated Successfully",
+                    title: "Property Added Successfully",
                     showConfirmButton: false,
                     timer: 1500
                 });
-                // console.log(data);
-                navigate("/about");
-
+                console.log(data);
             })
             .catch(err => {
-                console.error(err);
+                console.log(err)
             })
     }
 
     return (
         <div>
-            <div className="flex justify-center mt-4 sm:mt-6 md:mt-8 mb-8 sm:mb-12 md:mb-16 pb-4 px-4">
-      <form onSubmit={handleSubmit} className="w-full max-w-md bg-white shadow-md rounded-lg p-4 sm:p-6 space-y-4">
-        <h2 className="text-xl sm:text-2xl font-semibold text-center text-gray-700 mb-4">
+            <div className="flex justify-center mt-8 mb-16 pb-4">
+      <form onSubmit={handleSubmit} className="w-full max-w-md bg-white shadow-md rounded-lg p-6 space-y-4">
+        <h2 className="text-2xl font-semibold text-center text-gray-700 mb-4">
           Update Property
         </h2>
 
@@ -66,9 +62,8 @@ const handleSubmit = (e) => {
         <div>
           <label className="block text-gray-700 mb-1">Property Name</label>
           <input
-          name="property_name"
             type="text"
-            defaultValue={food?.property_name}
+            defaultValue={data.name}
             className="input input-bordered w-full"
           />
         </div>
@@ -77,8 +72,7 @@ const handleSubmit = (e) => {
         <div>
           <label className="block text-gray-700 mb-1">Description</label>
           <textarea
-          name="description"
-         defaultValue={food?.description}
+        defaultValue={data.name}
             className="textarea textarea-bordered w-full"
           ></textarea>
         </div>
@@ -86,8 +80,7 @@ const handleSubmit = (e) => {
         {/* Category */}
         <div>
           <label className="block text-gray-700 mb-1">Category</label>
-          <select name="catagory"
-           className="select select-bordered w-full">
+          <select  className="select select-bordered w-full">
             <option>Rent</option>
             <option>Sale</option>
             <option>Commercial</option>
@@ -99,8 +92,6 @@ const handleSubmit = (e) => {
         <div>
           <label className="block text-gray-700 mb-1">Price</label>
           <input
-          name="priceBDT"
-           defaultValue={food?.price}
             type="number"
             className="input input-bordered w-full"
           />
@@ -110,8 +101,6 @@ const handleSubmit = (e) => {
         <div>
           <label className="block text-gray-700 mb-1">Location</label>
           <input
-          name="location"
-           defaultValue={food?.location}
             type="text"
             className="input input-bordered w-full"
           />
@@ -121,8 +110,6 @@ const handleSubmit = (e) => {
         <div>
           <label className="block text-gray-700 mb-1">Image Link</label>
           <input
-          name="photo"
-           defaultValue={food?.image}
             type="text"
             className="input input-bordered w-full"
           />

@@ -14,7 +14,7 @@ const FoodDetails = () => {
 
     
     return (
-        <div className="mb-24">
+        <div className="mb-12 sm:mb-16 md:mb-24 px-4">
            <SingleFoodDetails foods={foods}></SingleFoodDetails>
         </div>
     );

@@ -1,23 +1,23 @@
 const Footer = () => {
     return (
         <div className="mt-[-64px]">
-            <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-                <nav>
-                    <h6 className="footer-title">Services</h6>
+            <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-6 sm:p-8 md:p-10 flex-col sm:flex-row gap-6 sm:gap-8">
+                <nav className="flex flex-col items-center sm:items-start">
+                    <h6 className="footer-title text-center sm:text-left">Services</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
-                <nav>
-                    <h6 className="footer-title">Company</h6>
+                <nav className="flex flex-col items-center sm:items-start">
+                    <h6 className="footer-title text-center sm:text-left">Company</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
-                <nav>
-                    <h6 className="footer-title">Social</h6>
+                <nav className="flex flex-col items-center sm:items-start">
+                    <h6 className="footer-title text-center sm:text-left">Social</h6>
                     <div className="grid grid-flow-col gap-4">
                         
                         <a

@@ -10,21 +10,21 @@ const slides = [
 const Banner = () => {
     return (
 
-        <div className='flex flex-col md:flex-row items-center justify-around min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100 px-24 py-10 gap-12 lg:gap-4'>
-            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center space-y-6 text-center md:text-left ">
-                <h1 className="text-6xl font-extrabold text-emerald-800 leading-tight">
+        <div className='flex flex-col md:flex-row items-center justify-around min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-6 sm:py-8 md:py-10 gap-6 sm:gap-8 md:gap-12 lg:gap-4'>
+            <div className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center space-y-4 sm:space-y-6 text-center md:text-left ">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-emerald-800 leading-tight">
                     Welcome to <br />
                     <span className="text-teal-600 font-extrabold">RUET Food Club 🍔</span>
                 </h1>
-                <p className="text-gray-500 text-md md:text-xl font-light max-w-md ">
+                <p className="text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl font-light max-w-md px-2 sm:px-0">
                     Our student meal deals bring you tasty, halal, and budget-friendly food to keep you energized through your study days. 🍔✨ Enjoy exclusive discounts from partner cafés — because good food fuels smart minds!
                 </p>       
 
             </div>
 
 
-            <div className="w-full md:w-1/2 "> {/* left half on md+ */}
-                <div className="h-full min-h-[320px]">
+            <div className="w-full md:w-1/2 px-2 sm:px-0"> {/* left half on md+ */}
+                <div className="h-full min-h-[280px] sm:min-h-[320px] md:min-h-[360px]">
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         pagination={{ clickable: true }}
@@ -34,7 +34,7 @@ const Banner = () => {
                     >
                         {slides.map(s => (
                             <SwiperSlide key={s.id}>
-                                <div style={{ position: 'relative', width: '100%', height: '420px' }}>
+                                <div style={{ position: 'relative', width: '100%', height: '280px', '@media (min-width: 640px)': { height: '350px' }, '@media (min-width: 768px)': { height: '420px' } }} className="h-[280px] sm:h-[350px] md:h-[420px]">
                                     <img
                                         src={s.src}
                                         alt={s.title}
@@ -45,16 +45,16 @@ const Banner = () => {
                                     {/* optional overlay text */}
                                     <div style={{
                                         position: 'absolute',
-                                        left: 18,
-                                        bottom: 18,
+                                        left: 12,
+                                        bottom: 12,
                                         color: 'white',
                                         background: 'rgba(0,0,0,0.35)',
-                                        padding: '10px 14px',
+                                        padding: '8px 12px',
                                         borderRadius: 8,
                                         maxWidth: '85%'
-                                    }}>
-                                        <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{s.title}</h3>
-                                        <p style={{ margin: 0, fontSize: 13, opacity: 0.95 }}>A healthy outside starts from the inside. – Robert Urich</p>
+                                    }} className="sm:left-4 sm:bottom-4 sm:p-3">
+                                        <h3 style={{ margin: 0, fontWeight: 700 }} className="text-sm sm:text-base md:text-lg">{s.title}</h3>
+                                        <p style={{ margin: 0, opacity: 0.95 }} className="text-xs sm:text-sm hidden sm:block">A healthy outside starts from the inside. – Robert Urich</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
