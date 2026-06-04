@@ -26,7 +26,9 @@ const router = createBrowserRouter([
             {
                 path: "/about",
                 loader: () => fetch('https://assignment10-ten.vercel.app/FoodAll'),
-                element: <AboutUs></AboutUs>
+                element: <PrivateRouter>
+                    <AboutUs></AboutUs>
+                </PrivateRouter>
             },
             {
                 path: "/Register",
@@ -36,6 +38,7 @@ const router = createBrowserRouter([
                 path: "/Login",
                 element: <Login></Login>
             },
+             
             {
                 path: "/detail/:_id",
                 loader: () => fetch('https://assignment10-ten.vercel.app/FoodAll'),

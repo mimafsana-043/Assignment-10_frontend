@@ -84,9 +84,14 @@ const Login = () => {
             })
             .catch((error) => {
                 const errorCode = error.code;
-                // const errorMessage = error.message;
+                const errorMessage = error.message;
                 // alert(errorCode, errorMessage);
                 setError(errorCode);
+                Swal.fire({
+                                    icon: "error",
+                                    title: "Login Failed",
+                                    text: errorMessage
+                                });
             });
     }
 
