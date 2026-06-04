@@ -63,6 +63,48 @@ console.log(theme);
                 <button onClick={handleToggle} className="btn btn-sm sm:btn-md rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white">change your Theme</button>
             </div>
 
+            <section className="mt-8 sm:mt-12 md:mt-16 px-4">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-emerald-800">
+                            Why Choose Us
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">
+                            We make student meals simple, affordable, and reliable with trusted partners and a focus on quality.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                            <div className="card-body p-5 sm:p-6">
+                                <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Verified Partners</h3>
+                                <p className="text-sm sm:text-base text-gray-600">
+                                    Cafes and restaurants are vetted to keep deals reliable and food quality consistent.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                            <div className="card-body p-5 sm:p-6">
+                                <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Student Friendly Pricing</h3>
+                                <p className="text-sm sm:text-base text-gray-600">
+                                    Clear prices and special offers help you eat well without overspending.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                            <div className="card-body p-5 sm:p-6">
+                                <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Fast, Nearby Options</h3>
+                                <p className="text-sm sm:text-base text-gray-600">
+                                    Discover nearby deals quickly so you can grab a meal between classes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 mb-8 sm:mb-12 md:mb-16 pb-4 sm:pb-8 px-4">
                 <div className="card w-full max-w-4xl bg-base-100 shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">

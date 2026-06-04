@@ -80,7 +80,7 @@ const Login = () => {
     no-repeat
   `
                 });
-                navigate(`${location.state ? location.state : "/"}`)
+                navigate(`${location.state ? location.state : "/Register"}`)
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -115,7 +115,7 @@ const Login = () => {
     no-repeat
   `
                 });
-                navigate(from, { replace: true });
+                navigate(`${location.state ? location.state : "/Register"}`);
             })
             .catch((error) => console.error(error.message));
     }

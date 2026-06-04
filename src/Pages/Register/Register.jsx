@@ -61,7 +61,7 @@ const Register = () => {
                     no-repeat
                   `
                                 }).then(() => {
-                                    navigate(`${location.state ? location.state : "/"}`);
+                                    navigate(`${location.state ? location.state : "/Login"}`);
                                 });
             })
             .catch((error) => {
@@ -94,7 +94,7 @@ const Register = () => {
         no-repeat
       `
                     }).then(() => {
-                        navigate(`${location.state ? location.state : "/"}`);
+                        navigate(`${location.state ? location.state : "/Login"}`);
                     });
                 })
                 .catch((error) => console.error(error.message));
