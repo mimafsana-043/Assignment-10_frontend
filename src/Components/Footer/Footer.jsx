@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div className="mt-[-64px]">
-            <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-6 sm:p-8 md:p-10 flex-col sm:flex-row gap-6 sm:gap-8">
+            <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-6 sm:p-8 md:p-10 mt-16 flex-col sm:flex-row gap-6 sm:gap-8">
                 <nav className="flex flex-col items-center sm:items-start">
                     <h6 className="footer-title text-center sm:text-left">Services</h6>
                     <a className="link link-hover">Branding</a>

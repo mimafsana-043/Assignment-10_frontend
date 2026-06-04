@@ -64,7 +64,7 @@ console.log(theme);
             </div>
 
 
-            <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 mb-8 sm:mb-12 md:mb-16 pb-4 sm:pb-8 px-4">
+            <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 mb-8 sm:mb-12 md:mb-16 pb-4 sm:pb-12 px-4">
                 <div className="card w-full max-w-4xl bg-base-100 shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">
                     <div className="card-body p-4 sm:p-6 md:p-8">
                         <h2 className="card-title text-xl sm:text-2xl md:text-3xl">About Meal Deals for Students</h2>
