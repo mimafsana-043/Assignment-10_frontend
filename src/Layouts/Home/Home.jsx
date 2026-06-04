@@ -37,7 +37,7 @@ console.log(theme);
                     <div className="w-24 h-1 bg-orange-400 rounded-full"></div>
                 </div>
             </div>
-            <Banner></Banner>
+            <Banner className="top-[-32px]"></Banner>
 
             <h1 className="text-teal-800 font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mt-6 sm:mt-8 mb-6 sm:mb-8 px-4">Our <span className="text-orange-500">Items</span> for you</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 m-4 sm:m-8 md:m-12 lg:m-16 xl:m-20">
@@ -64,9 +64,9 @@ console.log(theme);
             </div>
 
 
-            <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 mb-8 sm:mb-12 md:mb-16 pb-4 sm:pb-12 px-4">
+            <div className="flex justify-center mt-8 sm:mt-12 md:mt-16 mb-8 sm:mb-12 md:mb-16 pb-4 sm:pb-8 px-4">
                 <div className="card w-full max-w-4xl bg-base-100 shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">
-                    <div className="card-body p-4 sm:p-6 md:p-8">
+                    <div className="card-body p-4 sm:p-6 md:p-8 ">
                         <h2 className="card-title text-xl sm:text-2xl md:text-3xl">About Meal Deals for Students</h2>
                         <p className="text-sm sm:text-base">
                             Welcome to <span className="font-semibold">Meal Deals for Students</span> — a platform made to help students eat better on a budget! 🍱

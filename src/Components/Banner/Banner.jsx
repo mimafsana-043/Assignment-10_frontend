@@ -10,7 +10,7 @@ const slides = [
 const Banner = () => {
     return (
 
-        <div className='flex flex-col md:flex-row items-center justify-around min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-6 sm:py-8 md:py-10 gap-6 sm:gap-8 md:gap-12 lg:gap-4'>
+        <div className='flex flex-col md:flex-row items-baseline-last justify-around min-h-screen bg-gradient-to-r from-emerald-50 to-teal-100 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-6 sm:py-8 md:py-10 gap-6 sm:gap-8 md:gap-12 lg:gap-4 '>
             <div className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center space-y-4 sm:space-y-6 text-center md:text-left ">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-emerald-800 leading-tight">
                     Welcome to <br />
@@ -24,7 +24,7 @@ const Banner = () => {
 
 
             <div className="w-full md:w-1/2 px-2 sm:px-0"> {/* left half on md+ */}
-                <div className="h-full min-h-[280px] sm:min-h-[320px] md:min-h-[360px]">
+                <div className="h-full min-h-[340px] sm:min-h-[390px] md:min-h-[440px]">
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         pagination={{ clickable: true }}
@@ -34,7 +34,7 @@ const Banner = () => {
                     >
                         {slides.map(s => (
                             <SwiperSlide key={s.id}>
-                                <div style={{ position: 'relative', width: '100%', height: '280px', '@media (min-width: 640px)': { height: '350px' }, '@media (min-width: 768px)': { height: '420px' } }} className="h-[280px] sm:h-[350px] md:h-[420px]">
+                                <div style={{ position: 'relative', width: '100%', height: '340px', '@media (min-width: 640px)': { height: '400px' }, '@media (min-width: 768px)': { height: '480px' } }} className="h-[340px] sm:h-[400px] md:h-[480px]">
                                     <img
                                         src={s.src}
                                         alt={s.title}
