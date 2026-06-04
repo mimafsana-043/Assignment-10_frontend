@@ -69,34 +69,34 @@ console.log(theme);
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-emerald-800">
                             Why Choose Us
                         </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base">
+                        <p className="text-gray-600 max-w-2xl mx-auto mt-2 text-sm sm:text-base hover:text-gray-800 transition-colors">
                             We make student meals simple, affordable, and reliable with trusted partners and a focus on quality.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
-                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100 hover:shadow-lg transition-shadow hover:bg-gradient-to-r from-emerald-100 to-teal-200">
                             <div className="card-body p-5 sm:p-6">
                                 <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Verified Partners</h3>
-                                <p className="text-sm sm:text-base text-gray-600">
+                                <p className="text-sm sm:text-base text-gray-600 hover:text-gray-800 transition-colors">
                                     Cafes and restaurants are vetted to keep deals reliable and food quality consistent.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100 hover:shadow-lg transition-shadow hover:bg-gradient-to-r from-emerald-100 to-teal-200">
                             <div className="card-body p-5 sm:p-6">
                                 <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Student Friendly Pricing</h3>
-                                <p className="text-sm sm:text-base text-gray-600">
+                                <p className="text-sm sm:text-base text-gray-600 hover:text-gray-800 transition-colors">
                                     Clear prices and special offers help you eat well without overspending.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                        <div className="card bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100 hover:shadow-lg transition-shadow hover:bg-gradient-to-r from-emerald-100 to-teal-200">
                             <div className="card-body p-5 sm:p-6">
                                 <h3 className="text-lg sm:text-xl font-bold text-emerald-800">Fast, Nearby Options</h3>
-                                <p className="text-sm sm:text-base text-gray-600">
+                                <p className="text-sm sm:text-base text-gray-600 hover:text-gray-800 transition-colors">
                                     Discover nearby deals quickly so you can grab a meal between classes.
                                 </p>
                             </div>
@@ -129,6 +129,61 @@ console.log(theme);
                     </div>
                 </div>
             </div>
+
+            <section className="px-4 pb-10 sm:pb-12 md:pb-16">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-emerald-800">FAQ</h2>
+                        <p className="text-gray-600 mt-2 text-sm sm:text-base">
+                            Quick answers about deals, ordering, and eligibility.
+                        </p>
+                    </div>
+
+                    <div className="space-y-3 sm:space-y-4">
+                        <div className="collapse collapse-arrow bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                            <input type="radio" name="faq-accordion" defaultChecked />
+                            <div className="collapse-title text-base sm:text-lg font-semibold text-emerald-800">
+                                Who can use these deals?
+                            </div>
+                            <div className="collapse-content text-sm sm:text-base text-gray-600">
+                                Any student can browse and enjoy the offers. Some partners may ask for a student ID at pickup.
+                            </div>
+                        </div>
+
+                        <div className="collapse collapse-arrow bg-base-100 shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">
+                            <input type="radio" name="faq-accordion" />
+                            <div className="collapse-title text-base sm:text-lg font-semibold text-orange-600">
+                                Are prices final or do they change?
+                            </div>
+                            <div className="collapse-content text-sm sm:text-base text-gray-600">
+                                Deals are fixed for the listed time period, but partners can update them anytime.
+                            </div>
+                        </div>
+
+                        <div className="collapse collapse-arrow bg-base-100 shadow-md bg-gradient-to-r from-emerald-50 to-teal-100">
+                            <input type="radio" name="faq-accordion" />
+                            <div className="collapse-title text-base sm:text-lg font-semibold text-emerald-800">
+                                How do I find nearby options?
+                            </div>
+                            <div className="collapse-content text-sm sm:text-base text-gray-600">
+                                Use the list of items and pick deals that match your location and budget.
+                            </div>
+                        </div>
+
+                        <div className="collapse collapse-arrow bg-base-100 shadow-md bg-gradient-to-r from-yellow-50 to-orange-100">
+                            <input type="radio" name="faq-accordion" />
+                            <div className="collapse-title text-base sm:text-lg font-semibold text-orange-600">
+                                Do you offer delivery?
+                            </div>
+                            <div className="collapse-content text-sm sm:text-base text-gray-600">
+                                Delivery depends on the partner. Check the deal details or contact the cafe directly.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
 
 
         </div>
